@@ -10,8 +10,8 @@ from fastapi import FastAPI
 app = FastAPI()
 
 #Cree una nuevas credenciales para acceder a google storage, no me dejó con las otras credenciales
-storage_client = storage.Client.from_service_account_json('./creds/delorean-data-consulting-805bd95798d3.json')
-#storage_client = storage.Client()
+#storage_client = storage.Client.from_service_account_json('./creds/delorean-data-consulting-805bd95798d3.json')
+storage_client = storage.Client()
 bucket = storage_client.bucket('metadata_bucket1')
 #blob = bucket.blob('modelos/modelo_usuarios.pickle')
 #pickle_in = blob.download_as_string()
