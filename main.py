@@ -11,10 +11,10 @@ app = FastAPI()
 
 storage_client = storage.Client()
 bucket = storage_client.bucket('metadata_bucket1')
-blob = bucket.blob('modelos/modelo_usuarios.pickle')
-pickle_in = blob.download_as_string()
+#blob = bucket.blob('modelos/modelo_usuarios.pickle')
+#pickle_in = blob.download_as_string()
 
-modeloUsuarios =  pickle.loads(pickle_in)
+#modeloUsuarios =  pickle.loads(pickle_in)
 
 #usuario entrada
 
@@ -34,5 +34,5 @@ async def root():
 def modelo_predice():
     return usuariosOut[0]
 
-if __name__ == 'main':
-    app.run()
+#if __name__ == 'main':
+#    app.run()
